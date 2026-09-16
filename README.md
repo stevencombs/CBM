@@ -21,6 +21,7 @@ CBM/
   scripts/install-macos.sh    Homebrew + venv + skill + grok mcp add
   scripts/retro               open a machine folder in Zed (`retro vic20`)
   scripts/vic20.sh            Check / Run / Push / Push+run
+  images/                     workspace screenshots
 ```
 
 Default VIC-20 memory is **unexpanded 3.5K**. Ask for `8k` / `16k` / `24k` / `all` when a program needs it (that also moves the BASIC load address).
@@ -58,6 +59,8 @@ If you prefer to edit config by hand, copy `grok/config.snippet.toml` into `~/.g
 ## VIC-20 Zed beta
 
 Listing left (cyan boot paper), Grok in the **bottom** terminal (black / green phosphor), Source Code Pro, autosave 1s. Zed 1.20 Agent chat uses the listing paper — leave it closed; use **task: spawn → Grok Build**.
+
+![VIC-20 in Zed: cyan listing on the left, Grok Build along the bottom](images/example-vic20.png)
 
 ```bash
 ./scripts/install-vic20-zed.sh
