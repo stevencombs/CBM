@@ -1,0 +1,10 @@
+.DS_Store
+.vice/
+**/.venv/
+**/__pycache__/
+*.pyc
+*.pyo
+.python-version
+*.lst
+*.labels
+*.log

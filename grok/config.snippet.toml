@@ -1,0 +1,17 @@
+# Append to ~/.grok/config.toml (or run scripts/install-macos.sh).
+# Replace __CBM_ROOT__ with the clone path (usually $HOME/CBM).
+
+[mcp_servers.vice]
+command = "__CBM_ROOT__/mcp/vice/.venv/bin/python"
+args = ["__CBM_ROOT__/mcp/vice/server.py"]
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 120
+
+[mcp_servers.vice.env]
+PATH = "/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+HOME = "__HOME__"
+CBM_ROOT = "__CBM_ROOT__"
+GSETTINGS_SCHEMA_DIR = "/opt/homebrew/share/glib-2.0/schemas"
+XDG_DATA_DIRS = "/opt/homebrew/share:/usr/local/share:/usr/share"
+GDK_BACKEND = "quartz"
