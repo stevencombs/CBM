@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Open a machine profile in Zed. Beta: vic20. c64 and mega65 print a stub.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+machine="$(echo "${1:-}" | tr '[:upper:]' '[:lower:]')"
+
+case "$machine" in
+  vic20|vic|vic-20|v)
+    exec zed -n "$ROOT/VIC20"
+    ;;
+  c64|c)
+    echo "C64 profile is not in this beta. VIC-20:  $0 vic20" >&2
+    exit 1
+    ;;
+  mega65|m65|m)
+    echo "MEGA65 still uses mega65-zed. Not wired into this launcher yet." >&2
+    exit 1
+    ;;
+  *)
+    echo "usage: retro vic20 | c64 | mega65" >&2
+    echo "beta:  retro vic20" >&2
+    exit 2
+    ;;
+esac

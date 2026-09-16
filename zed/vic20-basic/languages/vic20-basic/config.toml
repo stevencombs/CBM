@@ -1,0 +1,8 @@
+name = "VIC-20 BASIC"
+path_suffixes = ["bas"]
+line_comments = ["rem ", "REM "]
+tab_size = 2
+soft_wrap = "preferred_line_length"
+brackets = [
+    { start = "\"", end = "\"", close = true, newline = false },
+]

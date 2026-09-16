@@ -1,14 +1,6 @@
 # hello
 
-VIC-20 unexpanded (3.5K) BASIC 2.0. Clears to a black screen, then prints **HELLO** with each letter a different colour.
-
-| Letter | Colour | `CHR$` |
-|--------|--------|--------|
-| H | red | 28 |
-| E | cyan | 159 |
-| L | purple | 156 |
-| L | green | 30 |
-| O | yellow | 158 |
+VIC-20 unexpanded (3.5K) BASIC 2.0. Clears to a black screen, then prints **HELLO** with each letter a different colour (`{red}` `{cyn}` `{pur}` `{grn}` `{yel}`).
 
 - Load address: `$1001` (4097)
 - VICE: `-memory none`

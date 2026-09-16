@@ -1,0 +1,30 @@
+[
+  {
+    "label": "VIC-20: Check listing",
+    "command": "../scripts/vic20.sh",
+    "args": ["check", "$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "VIC-20: Run in VICE",
+    "command": "../scripts/vic20.sh",
+    "args": ["run", "$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "VIC-20: Push",
+    "command": "../scripts/vic20.sh",
+    "args": ["push", "$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "VIC-20: Push+run",
+    "command": "../scripts/vic20.sh",
+    "args": ["push-run", "$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  }
+]

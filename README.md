@@ -14,9 +14,13 @@ CBM/
   C64/<program>/export/       .prg and .d64
   VIC20/<program>/…           same shape
   mcp/vice/                   Python MCP server (stdio)
+  zed/vic20-basic/            Zed theme, snippets, VIC-20 BASIC language (beta)
+  VIC20/.zed/                 workspace: cyan listing, phosphor Grok, tasks
   grok/skills/cbm/            Grok skill (symlinked into ~/.grok/skills)
   grok/config.snippet.toml    MCP stanza for ~/.grok/config.toml
   scripts/install-macos.sh    Homebrew + venv + skill + grok mcp add
+  scripts/retro               open a machine folder in Zed (`retro vic20`)
+  scripts/vic20.sh            Check / Run / Push / Push+run
 ```
 
 Default VIC-20 memory is **unexpanded 3.5K**. Ask for `8k` / `16k` / `24k` / `all` when a program needs it (that also moves the BASIC load address).
@@ -51,13 +55,24 @@ Then in Grok: **`/mcps` then `r`**, or start a new session.
 
 If you prefer to edit config by hand, copy `grok/config.snippet.toml` into `~/.grok/config.toml` and replace `__CBM_ROOT__` / `__HOME__`.
 
+## VIC-20 Zed beta
+
+Listing left (cyan boot paper), Grok right (black / green phosphor), Source Code Pro, autosave 1s.
+
+```bash
+./scripts/install-vic20-zed.sh
+./scripts/retro vic20
+```
+
+In Zed: **Install Dev Extension** → `zed/vic20-basic`. Open `hello/src/hello.bas`. Tasks: **Check listing**, **Run in VICE**, **Push**, **Push+run** (you press Push; Grok does not). Details: [`zed/vic20-basic/README.md`](zed/vic20-basic/README.md).
+
 ## How a session works
 
 1. Source lives in `C64/<name>/src` or `VIC20/<name>/src`.
-2. Grok tokenizes (`petcat -w2`) or assembles (`64tass --cbm-prg`).
-3. VICE autostarts the `.prg` with RAM inject and warp (`-autostartprgmode 1`).
+2. On VIC-20 BASIC, review the listing in Zed first. Tokenize (`petcat -w2`) or assemble (`64tass --cbm-prg`) on Check / when asked.
+3. **Run in VICE** autostarts the `.prg` (RAM inject, warp). Grok `load`s only if you ask.
 4. Grok may type **commands** at `READY.` (`LIST`, `RUN`, `SYS 2064`) — not whole programs.
-5. Screenshot or a screen-RAM dump confirms what happened.
+5. **Push** (your task) copies PRG/D64 to `VIC20/sdcard/` for SD2IEC / Pi1541.
 
 Load addresses:
 

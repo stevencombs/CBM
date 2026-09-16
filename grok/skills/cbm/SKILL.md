@@ -1,6 +1,6 @@
 ---
 name: cbm
-description: Write, build, run, and debug Commodore 64 and VIC-20 programs in BASIC 2.0 and 6502 assembly via the vice MCP and VICE. Use when the user mentions C64, VIC-20, VICE, petcat, 64tass, Commodore BASIC, 6502, SYS, PRG, D64, SD2IEC, Pi1541, or runs /cbm.
+description: Write, build, run, and debug Commodore 64 and VIC-20 programs in BASIC 2.0 and 6502 assembly via Zed (VIC-20 beta) and the vice MCP. Use when the user mentions C64, VIC-20, VICE, petcat, 64tass, Commodore BASIC, 6502, SYS, PRG, D64, SD2IEC, Pi1541, Zed BASIC, or runs /cbm.
 ---
 
 # CBM (C64 / VIC-20)
@@ -33,13 +33,19 @@ Names: lowercase, digits, hyphens.
 | `peek` / `poke` / `registers` | Monitor |
 | `reset` / `resume` / `stop` / `status` | Machine control |
 
+## VIC-20 BASIC in Zed (beta)
+
+Workspace is `~/CBM/VIC20` (`scripts/retro vic20`). Listing left, Grok right. PETSCII tokens live in `zed/vic20-basic/snippets/` (`{red}`, `{clr}`, `{rght}`…). Eight VIC colours only.
+
+Write `src/*.bas` and **stop**. The user reviews in Zed. Call `vice__load` only when they ask to run in VICE. Never run `scripts/vic20.sh push` — **Push** and **Push+run** are the user’s Zed tasks (copy to `VIC20/sdcard/`; they type `RUN` on the real VIC).
+
 ## Workflow
 
-1. Write `src/*.bas` or `src/*.asm` (edit files; never type a listing into VICE).
-2. `load` the program. That tokenizes or assembles, then autostarts.
+1. Write `src/*.bas` or `src/*.asm` (never type a listing into VICE).
+2. On VIC-20 BASIC, wait for review. Then `load` only if asked, or they use Zed **Run in VICE**.
 3. `screenshot` or `screen_text`.
-4. `type_keys` only for commands at the READY prompt.
-5. `export_d64` when it should go to real iron.
+4. `type_keys` only for READY-prompt commands (`LIST`, `RUN`, `SYS 4112`).
+5. Hardware: user **Push**, or `export_d64` if they ask you to build the image only.
 
 Default VIC-20 RAM is unexpanded 3.5K (`memory=none`) unless the user asks or BASIC runs out of memory. Then `8k` / `16k` / `24k` / `all` and retokenize (load address moves).
 

@@ -8,3 +8,6 @@
 *.lst
 *.labels
 *.log
+VIC20/sdcard/*
+!VIC20/sdcard/README.md
+!VIC20/sdcard/.gitkeep

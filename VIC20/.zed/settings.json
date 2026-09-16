@@ -1,0 +1,26 @@
+{
+  "theme": {
+    "mode": "dark",
+    "dark": "VIC-20 Cyan",
+    "light": "VIC-20 Cyan"
+  },
+  "buffer_font_family": "Source Code Pro",
+  "buffer_font_size": 20,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "agent": {
+    "dock": "right"
+  },
+  "terminal": {
+    "dock": "bottom"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "file_associations": {
+    "*.bas": "VIC-20 BASIC"
+  }
+}
