@@ -35,7 +35,7 @@ Names: lowercase, digits, hyphens.
 
 ## VIC-20 BASIC in Zed (beta)
 
-Workspace is `~/CBM/VIC20` (`scripts/retro vic20`). Listing left, Grok right. PETSCII tokens live in `zed/vic20-basic/snippets/` (`{red}`, `{clr}`, `{rght}`…). Eight VIC colours only.
+Workspace is `~/CBM/VIC20` (`scripts/retro vic20`). Listing left, Grok in the bottom terminal. PETSCII tokens live in `zed/vic20-basic/snippets/` (`{red}`, `{clr}`, `{rght}`…). Eight VIC colours only.
 
 Write `src/*.bas` and **stop**. The user reviews in Zed. Call `vice__load` only when they ask to run in VICE. Never run `scripts/vic20.sh push` — **Push** and **Push+run** are the user’s Zed tasks (copy to `VIC20/sdcard/`; they type `RUN` on the real VIC).
 

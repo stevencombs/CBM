@@ -1,6 +1,6 @@
 # VIC-20 BASIC (Zed) — beta
 
-Listing on the left (cyan boot-screen paper, blue ink, Source Code Pro). Grok on the right (black glass, green phosphor). You review the `.bas` before anything hits VICE or the SD card.
+Listing on the left (cyan boot-screen paper, blue ink, Source Code Pro). Grok in the bottom terminal (black glass, green phosphor). You review the `.bas` before anything hits VICE or the SD card.
 
 ## Install (once)
 
@@ -18,19 +18,11 @@ Open the machine folder (not `~/CBM`):
 
 Theme **VIC-20 Cyan** and font **Source Code Pro** come from `VIC20/.zed/settings.json`. Autosave is 1 second.
 
-## Grok on the right
+## Grok (bottom terminal)
 
-The listing is the cyan TV. Grok is the phosphor teletype on the **right dock** — it does not open by itself.
+The listing is the cyan TV. Grok is the phosphor teletype along the **bottom**. Zed 1.20 Agent chat uses the listing paper — leave that panel closed.
 
-Zed 1.20’s **Agent chat** (“New Zed Agent Thread”, Grok 4.6) is painted with the listing paper. Cyan on cyan. That panel cannot be black on this Zed version.
-
-Grok on the right is the **Terminal dock** (black glass, green type):
-
-1. Close the cyan Agent thread (panel menu **…** or hide the agent dock).
-2. **⌘⇧G** or **⌘J** — Terminal on the right.
-3. Command palette → **task: spawn** → **Grok Build**.
-
-You should see the Grok TUI on black, listing still cyan. **Push** stays your Zed task. Do not use the Agent chat for this profile.
+**⌘⇧G** or **⌘J** toggles the bottom terminal. **task: spawn → Grok Build** starts the TUI there. **Push** stays your Zed task.
 
 ## Tokens
 

@@ -32,8 +32,8 @@
     }
   },
   "terminal": {
-    "dock": "right",
-    "default_width": 480,
+    "dock": "bottom",
+    "default_height": 280,
     "blinking": "on",
     "font_family": "Source Code Pro",
     "font_size": 16
