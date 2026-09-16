@@ -18,6 +18,16 @@ Open the machine folder (not `~/CBM`):
 
 Theme **VIC-20 Cyan** and font **Source Code Pro** come from `VIC20/.zed/settings.json`. Autosave is 1 second.
 
+## Grok on the right
+
+The listing is the cyan TV. Grok is the phosphor teletype on the **right dock** — it does not open by itself.
+
+1. **⌘?** (or **⌘⇧G**) — Agent Panel. Same as command palette `agent: toggle focus`.
+2. **+** (new thread) → **Grok Build**.
+3. Prompt there. `vice` MCP and this repo’s skill still apply; **Push** stays your Zed task.
+
+If the panel is missing, the sparkle/agent button in the status bar also toggles it. A bottom terminal running `grok` is the TUI, not the right-hand dock.
+
 ## Tokens
 
 In a `.bas` buffer type `red`, `clr`, `cyn`, `yel`… then Tab. Or `{` and complete. Eight VIC colours only — no orange/greys. Spellings are `petcat`’s (`{rght}`, `{rvon}`, `{rvof}`).
