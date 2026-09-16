@@ -2,7 +2,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-shift-g": "agent::ToggleFocus"
+      "cmd-shift-g": "terminal::ToggleFocus",
+      "cmd-j": "terminal::ToggleFocus"
     }
   }
 ]

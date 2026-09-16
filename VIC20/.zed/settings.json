@@ -16,11 +16,9 @@
   "agent_buffer_font_family": "Source Code Pro",
   "agent_buffer_font_size": 16,
   "agent": {
-    "dock": "right",
-    "button": true,
-    "default_width": 480,
-    "default_view": "text_thread",
-    "terminal_init_command": "/Users/stevencombs/.grok/bin/grok"
+    "dock": "bottom",
+    "button": false,
+    "default_width": 480
   },
   "agent_servers": {
     "Grok Build": {
@@ -34,7 +32,11 @@
     }
   },
   "terminal": {
-    "dock": "bottom"
+    "dock": "right",
+    "default_width": 480,
+    "blinking": "on",
+    "font_family": "Source Code Pro",
+    "font_size": 16
   },
   "project_panel": {
     "dock": "left"

@@ -21,7 +21,7 @@
     "allow_concurrent_runs": false
   },
   {
-    "label": "Grok Build (TUI, bottom)",
+    "label": "Grok Build",
     "command": "/Users/stevencombs/.grok/bin/grok",
     "args": [],
     "use_new_terminal": true,

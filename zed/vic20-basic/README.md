@@ -22,13 +22,15 @@ Theme **VIC-20 Cyan** and font **Source Code Pro** come from `VIC20/.zed/setting
 
 The listing is the cyan TV. Grok is the phosphor teletype on the **right dock** — it does not open by itself.
 
-Zed 1.20 draws ACP chat on `editor.background` (the cyan listing). Green-on-cyan is unreadable. Grok on the right is therefore a **Terminal Thread** (black glass, green type):
+Zed 1.20’s **Agent chat** (“New Zed Agent Thread”, Grok 4.6) is painted with the listing paper. Cyan on cyan. That panel cannot be black on this Zed version.
 
-1. **⌘?** or **⌘⇧G** — Agent Panel.
-2. **+** → **New Terminal Thread** (this workspace starts Grok via `terminal_init_command`).
-3. That pane is the Grok Build TUI. `vice` MCP still applies. **Push** stays your Zed task.
+Grok on the right is the **Terminal dock** (black glass, green type):
 
-Do not use **Grok Build** in the ACP chat thread on this Zed version — that surface inherits the cyan paper. The TUI is the teletype we designed.
+1. Close the cyan Agent thread (panel menu **…** or hide the agent dock).
+2. **⌘⇧G** or **⌘J** — Terminal on the right.
+3. Command palette → **task: spawn** → **Grok Build**.
+
+You should see the Grok TUI on black, listing still cyan. **Push** stays your Zed task. Do not use the Agent chat for this profile.
 
 ## Tokens
 
