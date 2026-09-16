@@ -21,4 +21,4 @@ Open **this folder** as the workspace:
 ~/CBM/scripts/retro vic20
 ```
 
-Install and tasks: [`../zed/vic20-basic/README.md`](../zed/vic20-basic/README.md).
+Install and tasks: [`../zed/vic20-basic/README.md`](../zed/vic20-basic/README.md). Listing on the left (cyan), Grok in the **bottom** terminal (black/green).

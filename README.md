@@ -57,7 +57,7 @@ If you prefer to edit config by hand, copy `grok/config.snippet.toml` into `~/.g
 
 ## VIC-20 Zed beta
 
-Listing left (cyan boot paper), Grok right (black / green phosphor), Source Code Pro, autosave 1s.
+Listing left (cyan boot paper), Grok in the **bottom** terminal (black / green phosphor), Source Code Pro, autosave 1s. Zed 1.20 Agent chat uses the listing paper — leave it closed; use **task: spawn → Grok Build**.
 
 ```bash
 ./scripts/install-vic20-zed.sh
