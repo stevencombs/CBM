@@ -11,10 +11,16 @@
       "milliseconds": 1000
     }
   },
+  "agent_ui_font_family": "Source Code Pro",
+  "agent_ui_font_size": 18,
+  "agent_buffer_font_family": "Source Code Pro",
+  "agent_buffer_font_size": 16,
   "agent": {
     "dock": "right",
     "button": true,
-    "default_width": 480
+    "default_width": 480,
+    "default_view": "text_thread",
+    "terminal_init_command": "/Users/stevencombs/.grok/bin/grok"
   },
   "agent_servers": {
     "Grok Build": {
