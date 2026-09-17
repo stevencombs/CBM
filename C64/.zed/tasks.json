@@ -1,0 +1,38 @@
+[
+  {
+    "label": "C64: Check listing",
+    "command": "../scripts/c64.sh",
+    "args": ["check", "$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "C64: Run in VICE",
+    "command": "../scripts/c64.sh",
+    "args": ["run", "$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "C64: Push",
+    "command": "../scripts/c64.sh",
+    "args": ["push", "$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Grok Build",
+    "command": "/Users/stevencombs/.grok/bin/grok",
+    "args": [],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "cwd": "$ZED_WORKTREE_ROOT"
+  },
+  {
+    "label": "C64: Push+run",
+    "command": "../scripts/c64.sh",
+    "args": ["push-run", "$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  }
+]

@@ -1,6 +1,6 @@
 ---
 name: cbm
-description: Write, build, run, and debug Commodore 64 and VIC-20 programs in BASIC 2.0 and 6502 assembly via Zed (VIC-20 beta) and the vice MCP. Use when the user mentions C64, VIC-20, VICE, petcat, 64tass, Commodore BASIC, 6502, SYS, PRG, D64, SD2IEC, Pi1541, Zed BASIC, or runs /cbm.
+description: Write, build, run, and debug Commodore 64 and VIC-20 programs in BASIC 2.0 and 6502 assembly via Zed and the vice MCP. Use when the user mentions C64, VIC-20, VICE, petcat, 64tass, Commodore BASIC, 6502, SYS, PRG, D64, SD2IEC, Pi1541, Zed BASIC, or runs /cbm.
 ---
 
 # CBM (C64 / VIC-20)
@@ -33,16 +33,24 @@ Names: lowercase, digits, hyphens.
 | `peek` / `poke` / `registers` | Monitor |
 | `reset` / `resume` / `stop` / `status` | Machine control |
 
-## VIC-20 BASIC in Zed (beta)
+## BASIC in Zed
 
-Workspace is `~/CBM/VIC20` (`scripts/retro vic20`). Listing left, Grok in the bottom terminal. PETSCII tokens live in `zed/vic20-basic/snippets/` (`{red}`, `{clr}`, `{rght}`…). Eight VIC colours only.
+Open the machine folder, not `~/CBM`: `scripts/retro vic20` or `scripts/retro c64`. Listing left, Grok in the bottom terminal. Write `src/*.bas` and **stop**. The user reviews in Zed. Call `vice__load` only when they ask to run in VICE. Never run the push scripts — **Push** / **Push+run** are the user’s Zed tasks.
 
-Write `src/*.bas` and **stop**. The user reviews in Zed. Call `vice__load` only when they ask to run in VICE. Never run `scripts/vic20.sh push` — **Push** and **Push+run** are the user’s Zed tasks (copy to `VIC20/sdcard/`; they type `RUN` on the real VIC).
+| | VIC-20 | C64 |
+|--|--|--|
+| Workspace | `~/CBM/VIC20` | `~/CBM/C64` |
+| Tokens | `zed/vic20-basic/snippets/` — 8 colours | `zed/c64-basic/snippets/` — 16 colours + F2/F4/F6/F8 |
+| `petcat` | `-w2 -l 1001` | `-w2 -l 0801` |
+| Run | `xvic` | `x64sc` |
+| Push drop | `VIC20/sdcard/` | `C64/sdcard/` |
+
+Do not offer `{orng}` / greys on the VIC. Grok TUI is the bottom terminal; leave Zed Agent chat closed.
 
 ## Workflow
 
 1. Write `src/*.bas` or `src/*.asm` (never type a listing into VICE).
-2. On VIC-20 BASIC, wait for review. Then `load` only if asked, or they use Zed **Run in VICE**.
+2. On VIC-20 or C64 BASIC, wait for review. Then `load` only if asked, or they use Zed **Run in VICE**.
 3. `screenshot` or `screen_text`.
 4. `type_keys` only for READY-prompt commands (`LIST`, `RUN`, `SYS 4112`).
 5. Hardware: user **Push**, or `export_d64` if they ask you to build the image only.

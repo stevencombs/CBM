@@ -1,0 +1,47 @@
+{
+  "theme": {
+    "mode": "dark",
+    "dark": "C64 Blue",
+    "light": "C64 Blue"
+  },
+  "buffer_font_family": "Source Code Pro",
+  "buffer_font_size": 20,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "agent_ui_font_family": "Source Code Pro",
+  "agent_ui_font_size": 18,
+  "agent_buffer_font_family": "Source Code Pro",
+  "agent_buffer_font_size": 16,
+  "agent": {
+    "dock": "bottom",
+    "button": false,
+    "default_width": 480
+  },
+  "agent_servers": {
+    "Grok Build": {
+      "type": "custom",
+      "command": "/Users/stevencombs/.grok/bin/grok",
+      "args": ["agent", "stdio"],
+      "env": {
+        "HOME": "/Users/stevencombs",
+        "PATH": "/opt/homebrew/bin:/Users/stevencombs/.grok/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  },
+  "terminal": {
+    "dock": "bottom",
+    "default_height": 280,
+    "blinking": "on",
+    "font_family": "Source Code Pro",
+    "font_size": 16
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "file_associations": {
+    "*.bas": "C64 BASIC"
+  }
+}

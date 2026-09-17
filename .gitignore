@@ -11,3 +11,6 @@
 VIC20/sdcard/*
 !VIC20/sdcard/README.md
 !VIC20/sdcard/.gitkeep
+C64/sdcard/*
+!C64/sdcard/README.md
+!C64/sdcard/.gitkeep

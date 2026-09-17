@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# One-time VIC-20 Zed beta setup on this Mac.
+# One-time C64 Zed setup on this Mac.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-EXT="$ROOT/zed/vic20-basic"
+EXT="$ROOT/zed/c64-basic"
 
 echo "==> snippets"
 "$EXT/copy-snippets.sh"
@@ -18,11 +18,11 @@ echo
 echo "In Zed:"
 echo "  1. zed: extensions  →  Install Dev Extension"
 echo "     pick:  $EXT"
-echo "  2. File → Open Folder → $ROOT/VIC20"
-echo "     (or run:  $ROOT/scripts/retro vic20 )"
-echo "  3. Theme should be VIC-20 Cyan (cyan listing, green Grok chrome)."
-echo "  4. Open hello/src/hello.bas — type red / clr then Tab."
-echo "  5. Command palette → task: spawn → VIC-20: Check listing"
+echo "  2. File → Open Folder → $ROOT/C64"
+echo "     (or run:  $ROOT/scripts/retro c64 )"
+echo "  3. Theme should be C64 Blue (navy listing, green Grok chrome)."
+echo "  4. Open hello/src/hello.bas — type red / orng / clr then Tab."
+echo "  5. Command palette → task: spawn → C64: Check listing"
 echo
-echo "Push copies PRG/D64 to $ROOT/VIC20/sdcard (you press that task, not Grok)."
+echo "Push copies PRG/D64 to $ROOT/C64/sdcard (you press that task, not Grok)."
 echo "Grok is the bottom terminal: task: spawn → Grok Build. Leave Zed Agent chat closed."

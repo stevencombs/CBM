@@ -14,13 +14,16 @@ CBM/
   C64/<program>/export/       .prg and .d64
   VIC20/<program>/…           same shape
   mcp/vice/                   Python MCP server (stdio)
-  zed/vic20-basic/            Zed theme, snippets, VIC-20 BASIC language (beta)
+  zed/vic20-basic/            Zed theme, snippets, VIC-20 BASIC language
+  zed/c64-basic/              Zed theme, snippets, C64 BASIC language
   VIC20/.zed/                 workspace: cyan listing, phosphor Grok, tasks
+  C64/.zed/                   workspace: blue listing, phosphor Grok, tasks
   grok/skills/cbm/            Grok skill (symlinked into ~/.grok/skills)
   grok/config.snippet.toml    MCP stanza for ~/.grok/config.toml
   scripts/install-macos.sh    Homebrew + venv + skill + grok mcp add
-  scripts/retro               open a machine folder in Zed (`retro vic20`)
-  scripts/vic20.sh            Check / Run / Push / Push+run
+  scripts/retro               open a machine folder in Zed (`retro vic20` / `c64`)
+  scripts/vic20.sh            VIC-20 Check / Run / Push / Push+run
+  scripts/c64.sh              C64 Check / Run / Push / Push+run
   images/                     workspace screenshots
 ```
 
@@ -68,6 +71,17 @@ Listing left (cyan boot paper), Grok in the **bottom** terminal (black / green p
 ```
 
 In Zed: **Install Dev Extension** → `zed/vic20-basic`. Open `hello/src/hello.bas`. Tasks: **Check listing**, **Run in VICE**, **Push**, **Push+run** (you press Push; Grok does not). Details: [`zed/vic20-basic/README.md`](zed/vic20-basic/README.md).
+
+## C64 Zed
+
+Same desk as the VIC-20: listing left (**C64 Blue** boot paper), Grok in the **bottom** terminal. Sixteen colours (`{orng}`, `{lred}`, `{gry1}`…). Load `$0801`.
+
+```bash
+./scripts/install-c64-zed.sh
+./scripts/retro c64
+```
+
+Install Dev Extension → `zed/c64-basic`. Tasks: **C64: Check listing**, **Run in VICE**, **Push**, **Push+run**. Details: [`zed/c64-basic/README.md`](zed/c64-basic/README.md).
 
 ## How a session works
 
