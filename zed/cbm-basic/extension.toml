@@ -1,0 +1,8 @@
+id = "cbm-basic"
+name = "CBM BASIC"
+version = "0.2.0"
+schema_version = 1
+authors = ["retroCombs <steven@retrocombs.com>"]
+description = "CBM BASIC language for .bas and .m65 (VIC-20, C64, MEGA65) with PETSCII snippets"
+repository = "https://github.com/stevencombs/CBM"
+snippets = ["snippets/cbm basic.json"]

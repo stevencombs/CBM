@@ -1,5 +1,5 @@
 name = "CBM BASIC"
-path_suffixes = ["bas"]
+path_suffixes = ["bas", "m65"]
 line_comments = ["rem ", "REM "]
 tab_size = 2
 soft_wrap = "preferred_line_length"

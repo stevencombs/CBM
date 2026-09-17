@@ -23,4 +23,4 @@ Then command palette → **task: spawn**. You should see:
 - **MEGA65: Push to hardware** (`~/m65tools/etherload`)
 - **MEGA65: Push+run on hardware** (`etherload -r`)
 
-Listing language is **CBM BASIC**. Theme **MEGA65 Dark**. Grok stays on the bottom. You press Push; Grok does not.
+Listing language is **CBM BASIC** (Install Dev Extension → `~/CBM/zed/cbm-basic`). Theme **MEGA65 Dark**. Type `wht` then Tab for `{wht}`. Grok stays on the bottom. You press Push; Grok does not.

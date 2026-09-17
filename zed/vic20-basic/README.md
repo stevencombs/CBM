@@ -8,7 +8,7 @@ Listing on the left (cyan boot-screen paper, blue ink, Source Code Pro). Grok in
 ~/CBM/scripts/install-vic20-zed.sh
 ```
 
-Then in Zed: **zed: extensions → Install Dev Extension** → `~/CBM/zed/vic20-basic`.
+Then in Zed: **zed: extensions → Install Dev Extension** → `~/CBM/zed/cbm-basic` (language **CBM BASIC** for `.bas` / `.m65`) and `~/CBM/zed/vic20-basic` (theme).
 
 Open the machine folder (not `~/CBM`):
 

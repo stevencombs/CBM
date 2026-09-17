@@ -17,7 +17,8 @@ fi
 echo
 echo "In Zed:"
 echo "  1. zed: extensions  →  Install Dev Extension"
-echo "     pick:  $EXT"
+echo "     pick:  $ROOT/zed/cbm-basic   (language CBM BASIC)"
+echo "     pick:  $EXT                  (VIC-20 Cyan theme)"
 echo "  2. File → Open Folder → $ROOT/VIC20"
 echo "     (or run:  $ROOT/scripts/retro vic20 )"
 echo "  3. Theme should be VIC-20 Cyan (cyan listing, green Grok chrome)."

@@ -41,6 +41,9 @@
   "project_panel": {
     "dock": "left"
   },
+  "file_types": {
+    "CBM BASIC": ["bas", "m65"]
+  },
   "file_associations": {
     "*.bas": "CBM BASIC"
   }
