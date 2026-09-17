@@ -1,6 +1,6 @@
 ---
 name: cbm
-description: Write, build, run, and debug Commodore 64 and VIC-20 programs in BASIC 2.0 and 6502 assembly via Zed and the vice MCP. Use when the user mentions C64, VIC-20, VICE, petcat, 64tass, Commodore BASIC, 6502, SYS, PRG, D64, SD2IEC, Pi1541, Zed BASIC, or runs /cbm.
+description: Write, build, run, and debug Commodore 64, VIC-20, and MEGA65 programs via Zed and the vice MCP. Use when the user mentions C64, VIC-20, MEGA65, VICE, XEMU, etherload, petcat, 64tass, Commodore BASIC, BASIC65, 6502, SYS, PRG, D64, SD2IEC, Pi1541, Zed BASIC, or runs /cbm.
 ---
 
 # CBM (C64 / VIC-20)
@@ -35,15 +35,15 @@ Names: lowercase, digits, hyphens.
 
 ## BASIC in Zed
 
-Open the machine folder, not `~/CBM`: `scripts/retro vic20` or `scripts/retro c64`. Listing left, Grok in the bottom terminal. Write `src/*.bas` and **stop**. The user reviews in Zed. Call `vice__load` only when they ask to run in VICE. Never run the push scripts — **Push** / **Push+run** are the user’s Zed tasks.
+Open the machine folder: `scripts/retro vic20` / `c64` / `mega65`. Listing left, Grok in the bottom terminal. Write source and **stop**. The user reviews in Zed. Call `vice__load` only when they ask to run in VICE. Never run the push scripts — **Push** / **Push+run** are the user’s Zed tasks.
 
-| | VIC-20 | C64 |
-|--|--|--|
-| Workspace | `~/CBM/VIC20` | `~/CBM/C64` |
-| Tokens | `zed/vic20-basic/snippets/` — 8 colours | `zed/c64-basic/snippets/` — 16 colours + F2/F4/F6/F8 |
-| `petcat` | `-w2 -l 1001` | `-w2 -l 0801` |
-| Run | `xvic` | `x64sc` |
-| Push drop | `VIC20/sdcard/` | `C64/sdcard/` |
+| | VIC-20 | C64 | MEGA65 |
+|--|--|--|--|
+| Workspace | `~/CBM/VIC20` | `~/CBM/C64` | mega65-zed (`MEGA65_ZED`) |
+| Tokens | 8 colours | 16 colours + F2/F4/F6/F8 | 16 colours + `GRAPHIC` / `10print` |
+| Tokenize | `petcat -w2 -l 1001` | `petcat -w2 -l 0801` | `petcat -w65` (`$2001`) |
+| Run | `xvic` | `x64sc` | XEMU `xmega65 -prg` |
+| Push | `VIC20/sdcard/` | `C64/sdcard/` | `etherload` / `etherload -r` |
 
 Do not offer `{orng}` / greys on the VIC. Grok TUI is the bottom terminal; leave Zed Agent chat closed.
 

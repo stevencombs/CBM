@@ -21,7 +21,7 @@ CBM/
   grok/skills/cbm/            Grok skill (symlinked into ~/.grok/skills)
   grok/config.snippet.toml    MCP stanza for ~/.grok/config.toml
   scripts/install-macos.sh    Homebrew + venv + skill + grok mcp add
-  scripts/retro               open a machine folder in Zed (`retro vic20` / `c64`)
+  scripts/retro               open a machine folder in Zed (`retro vic20` / `c64` / `mega65`)
   scripts/vic20.sh            VIC-20 Check / Run / Push / Push+run
   scripts/c64.sh              C64 Check / Run / Push / Push+run
   images/                     workspace screenshots
@@ -82,6 +82,16 @@ Same desk as the VIC-20: listing left (**C64 Blue** boot paper), Grok in the **b
 ```
 
 Install Dev Extension → `zed/c64-basic`. Tasks: **C64: Check listing**, **Run in VICE**, **Push**, **Push+run**. Details: [`zed/c64-basic/README.md`](zed/c64-basic/README.md).
+
+## MEGA65 Zed
+
+Same verbs and keys. Listing is **MEGA65 Dark** (navy / gold). Tokenize with `petcat -w65` (`$2001`). **Run** is XEMU; **Push** / **Push+run** are `etherload` / `etherload -r` (mega65-tools).
+
+```bash
+./scripts/retro mega65
+```
+
+Repo: [stevencombs/mega65-zed](https://github.com/stevencombs/mega65-zed) (override path with `MEGA65_ZED`). **⌘⇧G** still toggles Grok on the bottom.
 
 ## How a session works
 
