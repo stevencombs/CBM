@@ -4,8 +4,6 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 machine="$(echo "${1:-}" | tr '[:upper:]' '[:lower:]')"
-MEGA65_ZED="${MEGA65_ZED:-$HOME/Google Drive (Home)/ZED Projects/mega65-zed}"
-
 case "$machine" in
   vic20|vic|vic-20|v)
     exec zed -n "$ROOT/VIC20"
@@ -14,12 +12,7 @@ case "$machine" in
     exec zed -n "$ROOT/C64"
     ;;
   mega65|m65|m)
-    if [[ ! -d "$MEGA65_ZED" ]]; then
-      echo "MEGA65-Zed not found at: $MEGA65_ZED" >&2
-      echo "Clone stevencombs/mega65-zed and set MEGA65_ZED." >&2
-      exit 1
-    fi
-    exec zed -n "$MEGA65_ZED"
+    exec zed -n "$ROOT/MEGA65"
     ;;
   *)
     echo "usage: retro vic20 | c64 | mega65" >&2

@@ -13,6 +13,7 @@ CBM/
   C64/<program>/src/          BASIC .bas or 64tass .asm
   C64/<program>/export/       .prg and .d64
   VIC20/<program>/…           same shape
+  MEGA65/<program>/src/       BASIC65 .m65
   mcp/vice/                   Python MCP server (stdio)
   zed/vic20-basic/            Zed theme, snippets; language **CBM BASIC**
   zed/c64-basic/              Zed theme, snippets; language **CBM BASIC**
@@ -91,7 +92,9 @@ Same verbs and keys. Listing is **MEGA65 Dark** (navy / gold). Tokenize with `pe
 ./scripts/retro mega65
 ```
 
-Repo: [stevencombs/mega65-zed](https://github.com/stevencombs/mega65-zed) (override path with `MEGA65_ZED`). **⌘⇧G** still toggles Grok on the bottom.
+Workspace is **`~/CBM/MEGA65`** (same as VIC20/C64). Theme and snippets still come from [mega65-zed](https://github.com/stevencombs/mega65-zed) (Install Dev Extension). **⌘⇧G** still toggles Grok on the bottom.
+
+Open `hello/src/hello.m65`, then **task: spawn**. Hardware: **MEGA65: Push to hardware** / **Push+run on hardware**. Emulator: **Run in XEMU** / **Push to XEMU**.
 
 ## How a session works
 
