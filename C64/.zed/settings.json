@@ -42,6 +42,6 @@
     "dock": "left"
   },
   "file_associations": {
-    "*.bas": "C64 BASIC"
+    "*.bas": "CBM BASIC"
   }
 }

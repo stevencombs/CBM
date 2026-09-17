@@ -1,4 +1,4 @@
-# C64 BASIC (Zed)
+# C64 CBM BASIC (Zed)
 
 Same desk as the VIC-20: listing on the left (C64 boot-screen blue paper, light-blue ink, Source Code Pro). Grok in the bottom terminal (black glass, green phosphor). You review the `.bas` before anything hits VICE or the SD card.
 

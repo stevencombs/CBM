@@ -14,8 +14,8 @@ CBM/
   C64/<program>/export/       .prg and .d64
   VIC20/<program>/…           same shape
   mcp/vice/                   Python MCP server (stdio)
-  zed/vic20-basic/            Zed theme, snippets, VIC-20 BASIC language
-  zed/c64-basic/              Zed theme, snippets, C64 BASIC language
+  zed/vic20-basic/            Zed theme, snippets; language **CBM BASIC**
+  zed/c64-basic/              Zed theme, snippets; language **CBM BASIC**
   VIC20/.zed/                 workspace: cyan listing, phosphor Grok, tasks
   C64/.zed/                   workspace: blue listing, phosphor Grok, tasks
   grok/skills/cbm/            Grok skill (symlinked into ~/.grok/skills)

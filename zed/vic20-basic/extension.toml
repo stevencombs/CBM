@@ -1,11 +1,11 @@
 id = "vic20-basic"
-name = "VIC-20 BASIC"
+name = "CBM BASIC (VIC-20)"
 version = "0.1.0"
 schema_version = 1
 authors = ["retroCombs <steven@retrocombs.com>"]
 description = "VIC-20 BASIC 2.0 in Zed: cyan listing (boot screen), phosphor-green Grok chrome, PETSCII tokens"
 repository = "https://github.com/stevencombs/CBM"
-snippets = ["snippets/vic-20 basic.json"]
+snippets = ["snippets/cbm basic.json"]
 
 [theme]
 name = "VIC-20 Cyan"

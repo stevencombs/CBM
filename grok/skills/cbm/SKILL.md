@@ -40,6 +40,7 @@ Open the machine folder: `scripts/retro vic20` / `c64` / `mega65`. Listing left,
 | | VIC-20 | C64 | MEGA65 |
 |--|--|--|--|
 | Workspace | `~/CBM/VIC20` | `~/CBM/C64` | mega65-zed (`MEGA65_ZED`) |
+| Language | CBM BASIC | CBM BASIC | CBM BASIC |
 | Tokens | 8 colours | 16 colours + F2/F4/F6/F8 | 16 colours + `GRAPHIC` / `10print` |
 | Tokenize | `petcat -w2 -l 1001` | `petcat -w2 -l 0801` | `petcat -w65` (`$2001`) |
 | Run | `xvic` | `x64sc` | XEMU `xmega65 -prg` |

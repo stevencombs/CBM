@@ -1,4 +1,4 @@
-# VIC-20 BASIC (Zed) — beta
+# VIC-20 CBM BASIC (Zed)
 
 Listing on the left (cyan boot-screen paper, blue ink, Source Code Pro). Grok in the bottom terminal (black glass, green phosphor). You review the `.bas` before anything hits VICE or the SD card.
 

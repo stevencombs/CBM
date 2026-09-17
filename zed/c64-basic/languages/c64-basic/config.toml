@@ -1,4 +1,4 @@
-name = "C64 BASIC"
+name = "CBM BASIC"
 path_suffixes = ["bas"]
 line_comments = ["rem ", "REM "]
 tab_size = 2

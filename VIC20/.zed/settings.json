@@ -42,6 +42,6 @@
     "dock": "left"
   },
   "file_associations": {
-    "*.bas": "VIC-20 BASIC"
+    "*.bas": "CBM BASIC"
   }
 }
