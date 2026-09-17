@@ -6,7 +6,3 @@ authors = ["retroCombs <steven@retrocombs.com>"]
 description = "CBM BASIC language for .bas and .m65 (VIC-20, C64, MEGA65) with PETSCII snippets"
 repository = "https://github.com/stevencombs/CBM"
 snippets = ["snippets/cbm basic.json"]
-
-[grammars.ini]
-repository = "https://github.com/justinmk/tree-sitter-ini"
-rev = "e4018b5176132b4f3c5d6e61cea383f42288d0f5"

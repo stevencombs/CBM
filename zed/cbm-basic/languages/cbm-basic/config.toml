@@ -1,5 +1,5 @@
 name = "CBM BASIC"
-grammar = "ini"
+grammar = "json"
 path_suffixes = ["bas", "m65"]
 line_comments = ["rem ", "REM "]
 tab_size = 2
