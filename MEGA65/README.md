@@ -5,7 +5,7 @@ Each program is a folder:
 ```
 MEGA65/<name>/
   README.md
-  src/          ; .m65 (BASIC65)
+  src/          ; .bas (BASIC65 — same extension as VIC-20/C64)
   export/       ; .prg
 ```
 

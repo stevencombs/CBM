@@ -24,14 +24,14 @@ find_m65tool() {
 }
 
 usage() {
-  echo "usage: $(basename "$0") check|run|push|push-run|push-xemu [listing.m65]" >&2
+  echo "usage: $(basename "$0") check|run|push|push-run|push-xemu [listing.bas]" >&2
   exit 2
 }
 
 program_dir() {
   local f="${1:-}"
   if [[ -z "$f" || "$f" == *"\$ZED_FILE"* ]]; then
-    echo "Open a .m65 listing in src/ first." >&2
+    echo "Open a .bas listing in src/ first." >&2
     exit 1
   fi
   [[ "$f" == /* ]] || f="$PWD/$f"
@@ -48,12 +48,18 @@ tokenize() {
   local dir="$1"
   local name
   name="$(basename "$dir")"
-  local src="$dir/src/${name}.m65"
-  if [[ ! -f "$src" ]]; then
-    src="$(ls "$dir"/src/*.m65 2>/dev/null | head -1 || true)"
+  local src=""
+  for ext in bas m65; do
+    if [[ -f "$dir/src/${name}.${ext}" ]]; then
+      src="$dir/src/${name}.${ext}"
+      break
+    fi
+  done
+  if [[ -z "$src" ]]; then
+    src="$(ls "$dir"/src/*.bas "$dir"/src/*.m65 2>/dev/null | head -1 || true)"
   fi
   if [[ -z "$src" || ! -f "$src" ]]; then
-    echo "No .m65 in $dir/src" >&2
+    echo "No .bas (or .m65) in $dir/src" >&2
     exit 1
   fi
   mkdir -p "$dir/export"

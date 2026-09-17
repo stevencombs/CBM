@@ -51,6 +51,7 @@
     ]
   },
   "file_associations": {
+    "*.bas": "CBM BASIC",
     "*.m65": "CBM BASIC"
   },
   "languages": {
