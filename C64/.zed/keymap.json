@@ -5,5 +5,18 @@
       "cmd-shift-g": "terminal::ToggleFocus",
       "cmd-j": "terminal::ToggleFocus"
     }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::ConfirmCompletion",
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-space": "editor::ShowCompletions"
+    }
   }
 ]
