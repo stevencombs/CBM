@@ -24,7 +24,10 @@
     "Grok Build": {
       "type": "custom",
       "command": "/Users/stevencombs/.grok/bin/grok",
-      "args": ["agent", "stdio"],
+      "args": [
+        "agent",
+        "stdio"
+      ],
       "env": {
         "HOME": "/Users/stevencombs",
         "PATH": "/opt/homebrew/bin:/Users/stevencombs/.grok/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -42,9 +45,22 @@
     "dock": "left"
   },
   "file_types": {
-    "CBM BASIC": ["m65", "bas"]
+    "CBM BASIC": [
+      "m65",
+      "bas"
+    ]
   },
   "file_associations": {
     "*.m65": "CBM BASIC"
+  },
+  "languages": {
+    "CBM BASIC": {
+      "show_edit_predictions": false,
+      "tab_size": 2
+    },
+    "Plain Text": {
+      "show_edit_predictions": false,
+      "tab_size": 2
+    }
   }
 }

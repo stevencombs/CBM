@@ -1,8 +1,12 @@
 id = "cbm-basic"
 name = "CBM BASIC"
-version = "0.2.0"
+version = "0.3.0"
 schema_version = 1
 authors = ["retroCombs <steven@retrocombs.com>"]
 description = "CBM BASIC language for .bas and .m65 (VIC-20, C64, MEGA65) with PETSCII snippets"
 repository = "https://github.com/stevencombs/CBM"
 snippets = ["snippets/cbm basic.json"]
+
+[grammars.cbm_basic]
+repository = "https://github.com/tree-sitter/tree-sitter-html"
+rev = "bfa075d83c6b97cd48440b3829ab8d24a2319809"
