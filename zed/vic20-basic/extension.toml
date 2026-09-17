@@ -7,6 +7,10 @@ description = "VIC-20 BASIC 2.0 in Zed: cyan listing (boot screen), phosphor-gre
 repository = "https://github.com/stevencombs/CBM"
 snippets = ["snippets/cbm basic.json"]
 
+[grammars.ini]
+repository = "https://github.com/justinmk/tree-sitter-ini"
+rev = "e4018b5176132b4f3c5d6e61cea383f42288d0f5"
+
 [theme]
 name = "VIC-20 Cyan"
 path = "themes/vic20.json"

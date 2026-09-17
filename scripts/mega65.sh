@@ -84,11 +84,24 @@ case "$cmd" in
     fi
     echo "Pushing $prg into XEMU (-besure -prg)"
     pkill -x xmega65 2>/dev/null || true
-    sleep 0.3
-    # App bundle is x86_64; Rosetta is required on Apple Silicon.
-    arch -x86_64 "$xbin" -besure -prg "$prg" \
-      >/tmp/cbm-xmega65.log 2>&1 &
-    echo "XEMU started (log /tmp/cbm-xmega65.log)"
+    sleep 0.4
+    # Detach via LaunchServices so the Zed task shell cannot kill XEMU on exit.
+    open -na "$XMEGA65_APP" --args -besure -prg "$prg"
+    sleep 1.5
+    if ! pgrep -x xmega65 >/dev/null; then
+      echo "XEMU did not stay running. Trying nohup..." >&2
+      nohup arch -x86_64 "$xbin" -besure -prg "$prg" \
+        >/tmp/cbm-xmega65.log 2>&1 </dev/null &
+      disown || true
+      sleep 1.5
+    fi
+    if pgrep -x xmega65 >/dev/null; then
+      echo "XEMU is running (pid $(pgrep -x xmega65 | tr '\n' ' '))"
+    else
+      echo "XEMU failed to start. Log:" >&2
+      cat /tmp/cbm-xmega65.log >&2 || true
+      exit 1
+    fi
     ;;
   push)
     prg="$(tokenize "$dir")"
