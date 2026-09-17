@@ -1,10 +1,5 @@
 name = "CBM BASIC"
-grammar = "cbm_basic"
-path_suffixes = ["bas", "m65"]
+path_suffixes = ["bas"]
 line_comments = ["rem ", "REM "]
 tab_size = 2
 soft_wrap = "preferred_line_length"
-completion_query_characters = ["{", "}"]
-brackets = [
-    { start = "\"", end = "\"", close = true, newline = false },
-]
